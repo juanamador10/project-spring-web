@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- ::::::: CREANDO BEAN DE DIQUERA DAO ::::::: -->
+	<!-- <bean id="disqueraDAO" class="com.juanamador.projectspring.project_spring_desktop.dao.impl.DisqueraDAOImpl"> 
+		</bean> <bean id="nacionalidadDAO" class="com.juanamador.projectspring.project_spring_desktop.dao.impl.NacionalidadDAOImpl"> 
+		</bean> -->
+
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com.juanamador"></context:component-scan>
+	
+<!-- 	<bean id="springServiceImpl" class="com.juanamador.projectspringweb.services.impl.SpringServiceImpl"></bean> -->
+	
+	<bean id="properties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:config.properties</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
